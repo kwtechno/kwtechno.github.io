@@ -1,0 +1,445 @@
+@charset "UTF-8";
+@import url("grid.css");
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap&text=可能性が、無限にある！！');
+
+body {
+  font-family: 'Kiwi Maru', serif;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  /*高さ自動*/
+}
+
+a {
+  display: block;
+  color: #666;
+  text-decoration-line: none;
+}
+
+a:hover {
+  color: #999;
+}
+
+/*マウス
+-------------------------------------*/
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: transform 0.2s, top, 0.5s, left 0.5s, width .5s, height .5s, background-color .5s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
+
+#cursor {
+  transform: translate(0, 0);
+  pointer-events: none;
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  z-index: 999;
+  transition: width .3s, height .3s, top .3s, left .3s;
+}
+
+* {
+  cursor: none;
+}
+
+/*ヘッダー
+-------------------------------------*/
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0 0 0;
+}
+
+.header-box {
+  margin-left: auto;
+  margin-top: 8px;
+}
+
+.contact-button {
+  padding: 1rem;
+  border: 2px solid #000;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  margin: 1rem 0 0 0;
+}
+
+nav li {
+  flex: 1 0 auto;
+}
+
+nav li a {
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+
+nav a:hover {
+  background-color: #f7f7f7;
+}
+
+nav a {
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+
+  /* PC時はMENUボタンを非表示 */
+  #open, #close {
+    display: none !important;
+  }
+
+  #navi {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .header #open, #close {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .header li {
+    padding-top: 0;
+  }
+
+  /* スマホ時はMENUボタンを表示 */
+  #open, #close {
+    display: block;
+    width: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+  }
+
+  /* スマホ時はメニューを非表示 */
+  #navi {
+    display: none;
+  }
+}
+
+/*メイン画像
+-------------------------------------*/
+.mainimg img {
+  width: 100vw;
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+  margin: 5rem 0 0 0;
+}
+
+section {
+  margin: 5rem 0;
+  padding: 3rem 0;
+}
+
+.gray-back {
+  background-color: #f4f4f4;
+}
+
+/*キャッチコピー
+-------------------------------------*/
+.catch {
+  text-align: center;
+}
+
+.catch h2 {
+  padding-bottom: 1rem;
+}
+
+.under {
+  border-bottom: 0.4rem solid #000;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/*申し込みの流れ
+-------------------------------------*/
+.flow.row {
+  margin-bottom: 3rem;
+}
+
+.flowtitle {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0 17%;
+  text-align: center;
+  color: #00acc1;
+}
+
+.flowtitle::before,
+.flowtitle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 15%;
+  height: 3px;
+  border-top: 3px solid #00acc1;
+}
+
+.flowtitle::before {
+  left: 0;
+}
+
+.flowtitle::after {
+  right: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  /*左右中央揃え*/
+  align-items: center;
+  /*上下中央揃え*/
+}
+
+/*フッター
+-------------------------------------*/
+footer {
+  background-color: #f7f7f7;
+  padding: 5rem 0;
+}
+
+footer h4 {
+  border-bottom: 3px solid #ccc;
+}
+
+/*お問い合わせ
+-------------------------------------*/
+.contact-box {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.table {
+  margin: 4rem 0;
+}
+
+.table th {
+  width: 250px;
+}
+
+.button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: #fff;
+  width: 100px;
+  padding: 20px 30px;
+  border: 5px solid #4ac0ee;
+  color: #4ac0ee;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
+  -moz-transition: all 0.15s ease-out 0.15s;
+  -o-transition: all 0.15s ease-out 0.15s;
+  -webkit-transition: all 0.15s ease-out;
+  -webkit-transition-delay: 0.15s;
+  transition: all 0.15s ease-out 0.15s;
+}
+
+.button:after, .button:before {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  bottom: -10px;
+  content: '';
+  z-index: 1;
+  -moz-transition: all 0.15s ease-out 0.15s;
+  -o-transition: all 0.15s ease-out 0.15s;
+  -webkit-transition: all 0.15s ease-out;
+  -webkit-transition-delay: 0.15s;
+  transition: all 0.15s ease-out 0.15s;
+}
+
+.button:before {
+  background: #4ac0ee;
+  top: 10px;
+  left: -15px;
+  height: 100%;
+  width: 15px;
+}
+
+.button:after {
+  width: 100%;
+  background: #4ac0ee;
+  right: 0px;
+  left: -15px;
+  height: 15px;
+}
+
+.button:hover {
+  background: #4ac0ee;
+  color: #fff;
+  margin-left: -7.5px;
+  margin-bottom: -7.5px;
+}
+
+.button:hover:after, .button:hover:before {
+  top: 100%;
+  left: 0;
+  bottom: 0px;
+}
+
+.button:hover:before {
+  top: 0px;
+  left: 0px;
+  width: 0px;
+}
+
+.button:hover:after {
+  right: 0px;
+  left: 0px;
+  height: 0px;
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.copyright a {
+  color: #fff;
+  text-decoration: none;
+  display: inline;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+#pagetop a {
+  display: block;
+  background: #000;
+  color: #fff;
+  width: 50px;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+#pagetop a:hover {
+  background: #666;
+}
+
+/*画像ホバーアニメーション
+-------------------------------------*/
+figure {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+figure::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+
+figure:hover::before {
+  -webkit-animation: shine .75s;
+  animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+/* 幅768px以下の表示
+-------------------------------------*/
+@media screen and (max-width: 768px) {
+
+  /*ヘッダー
+-------------------------------------*/
+  .header-box {
+    display: none;
+  }
+
+/*お問い合わせ
+-------------------------------------*/
+  .table th {
+    width: 100%;
+    display: block;
+  }
+
+  .table td {
+    display: block;
+  }
+}
+/*商品ページ
+-------------------------------------*/
+.h80{
+  height:80vh;
+  width:auto;
+}
