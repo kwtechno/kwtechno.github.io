@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>けんごウェブテクノロジー</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" media="all" href="../css/ress.min.css" />
+  <link rel="stylesheet" media="all" href="../css/style.css" />
+  <script src="../js/jquery-2.1.4.min.js"></script>
+  <script src="../js/style.js"></script>
+  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row" id="page-top">
+        <div class="col span-12 header">
+          <h1><a href="">けんごウェブテクノロジー</a></h1>
+          <div class="header-box"><a href="#4"><span class="contact-button">お問い合わせ</span></a></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span-12">
+          <nav>
+            <div id="open"><img src="./img/button.png"></div>
+            <div id="close"><img src="./img/button2.png"></div>
+            <div id="navi">
+              <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="#1">商品一覧</a></li>
+                <li><a href="#2">社長紹介</a></li>
+                <li><a href="#3">納品までの流れ</a></li>
+                <li><a href="#4">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="topimg">
+    <img src="../img/light.png" alt="お手軽、お得。"　class="center h80">
+  </div>
+  <!--<footer>
+    <div class="container">
+      <div class="row">
+        <div class="col span-4">
+          <h4>フッター1</h4>
+          <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
+        </div>
+        <div class="col span-4">
+          <h4>フッター2</h4>
+          <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
+        </div>
+        <div class="col span-4">
+          <h4>フッター3</h4>
+          <p>ここにSNSやテキストなどが入ります。SNSやテキストなどが入ります。</p>
+        </div>
+      </div>
+    </div>
+  </footer>-->
+  <div class="copyright">
+    Copyright (C) 2021 Kengo Web Technology.
+  </div>
+  <p id="pagetop"><a href="#page-top">TOP</a></p>
+  <div id="stalker"></div>
+  <div id="cursor"></div>
+  <script>
+    //準備
+    let cursorR = 5;
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', function(e) {
+      cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+    });
+    const stalker = document.getElementById('stalker');
+    let hovFlag = false;
+    document.addEventListener('mousemove', function(e) {
+      if (!hovFlag) {
+        stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+      }
+    })
+    const hover = document.getElementById('hover');
+    hover.addEventListener('mouseover', () => {
+      stalker.style.background = 'rgba(255,204,0,0.5)';
+      stalker.style.borderRadius = 'none';
+    }, false);
+    hover.addEventListener('mouseleave', () => {
+      stalker.style.background = 'rgba(0,0,0,0.5)';
+    }, false);
+  </script>
+</body>
+
+</html>
