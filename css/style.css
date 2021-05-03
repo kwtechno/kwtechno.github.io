@@ -6,6 +6,7 @@
 body {
   font-family: 'Kiwi Maru', serif;
   color: black;
+  font-weight:300;
 }
 
 img {
@@ -24,6 +25,10 @@ a:hover {
   color: #999;
 }
 
+.zisin {
+  font-style:italic;
+  color:red;
+}
 /*マウス
 -------------------------------------*/
 #stalker {
