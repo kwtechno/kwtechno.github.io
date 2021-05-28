@@ -36,53 +36,58 @@
     </nav>
   </header>
   <main>
-    <div class="container">
-      <h2 class="sample-title">お問い合わせ</h2>
+    <article>
       <div class="container">
-        <form class="formrun form1 mt-5" action="https://form.run/api/v1/r/a4qpegcnhd9apj0y3zhaas0c" method="post">
-          <!-- class, action, methodを変更しないでください -->
-          <div class="form-group">
-            <label for="name">お名前　[必須]</label>
-            <input name="name" type="text" class="form-control"　data-formrun-required>
-          </div>
+        <br>
+        <h2>お問い合わせ</h2>
+        <div class="container">
+          <form class="formrun form1 mt-5" action="https://form.run/api/v1/r/a4qpegcnhd9apj0y3zhaas0c" method="post">
+            <!-- class, action, methodを変更しないでください -->
+            <div class="form-group">
+              <label for="name">お名前 [必須]</label>
+              <input name="name" type="text" class="form-control" 　data-formrun-required>
+            </div>
 
-          <div class="form-group">
-            <label for="email">メールアドレス [必須]</label>
-            <input name="email" type="text" data-formrun-type="email" data-formrun-required class="form-control">
-            <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
-          </div>
+            <div class="form-group">
+              <label for="email">メールアドレス [必須]</label>
+              <input name="email" type="text" data-formrun-type="email" data-formrun-required class="form-control">
+              <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+            </div>
 
-          <div class="form-group">
-            <label for="contact">お問い合わせ [必須]</label>
-            <textarea name="contact" data-formrun-required class="form-control"></textarea>
-            <div data-formrun-show-if-error="お問い合わせ">お問い合わせを入力してください</div>
-          </div>
+            <div class="form-group">
+              <p>
+              <label for="contact">お問い合わせ [必須]</label>
+              <textarea name="contact" data-formrun-required class="form-control"></textarea>
+              <div data-formrun-show-if-error="お問い合わせ">お問い合わせを入力してください</div>
+            </div>
 
-          <div class="form-group">
-            <label　for="privacy">個人情報利用同意 [必須]</label>
-            <input type="checkbox" name="privacy" data-formrun-required class="form-control">
-            <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
-          </div>
+            <div class="form-group">
+              <p>お問い合わせいただいた際に伺った個人情報は、ご回答のために必要な範囲に限定して利用させていただくとともに、個人情報保護方針(まだ書けてません。。。)に基づき厳重に取り扱いを行います。</p>
+              <label　for="privacy">個人情報利用同意 [必須]</label>
+              <input type="checkbox" name="privacy" data-formrun-required class="form-control">
+              <div data-formrun-show-if-error="個人情報利用同意">同意してください</div>
+            </div>
 
-          <!-- ボット投稿をブロックするためのタグ -->
-          <div class="_formrun_gotcha">
-            <style media="screen">
-              ._formrun_gotcha {
-                position: absolute !important;
-                height: 1px;
-                width: 1px;
-                overflow: hidden;
-              }
-            </style>
-            <label for="_formrun_gotcha">If you are a human, ignore this field</label>
-            <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
-          </div>
-          <div class="forn-group">
-            <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." class="btn btn-warning">送信</button>
-          </div>
-        </form>
+            <!-- ボット投稿をブロックするためのタグ -->
+            <div class="_formrun_gotcha">
+              <style media="screen">
+                ._formrun_gotcha {
+                  position: absolute !important;
+                  height: 1px;
+                  width: 1px;
+                  overflow: hidden;
+                }
+              </style>
+              <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+              <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+            </div>
+            <div class="forn-group">
+              <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..." class="btn btn-warning">送信</button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </article>
   </main>
 
   <footer id="footer">
