@@ -13,15 +13,31 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/queries.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-  <script src="_inject/index.js"></script>
 </head>
 
 <body id="page-top">
+
+  <script>
+    window.onload = function() {
+      const spinner = document.getElementById('loader');
+      spinner.classList.add('loaded');
+    }
+  </script>
+  <div class="loader" id="loader">
+    <div class="loading-panel-wrap">
+      <div class="loading-panel">
+        <span>
+          <h3>Loading...</h3>
+        </span>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </div>
   <!------------------------------------------------------------------------------------------------------------------>
   <header>
     <nav class="navbar navbar-expand-md navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html"><img src="../img/logo-wt.png" alt="けんごウェブテクノロジー"></a>
+        <a class="navbar-brand" href="/index.html"><img src="/img/logo-wt.png" alt="けんごウェブテクノロジー"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
         </button>
 
@@ -45,7 +61,7 @@
           <a href="contact/index.html" class="btn btn-outline-warning btn-lg text-white rounded-0">お問い合わせ</a>
         </div>
       </div>
-   </div>
+    </div>
     <!------------------------------------------------------------------------------------------------------------------>
     <!--<section id="sec1">
       <div class="container">
@@ -105,15 +121,17 @@
         <div class="row justify-content-start">
           <div class="col-md-4 col-sm-12">
             <a href="economy.html">
-            <figure class="text-center"><i class="fas fa-desktop fa-5x gray"></i></figure>
-            <h3 class="text-center">ECONOMY</h3>
-            <p class="text-body mb-5">　エコノミープランでは、1ページ、集客目的のチラシのようなページを制作します。<br>とりあえず試してみたい方におすすめです！<br></p>
-          </a>
+              <figure class="text-center"><i class="fas fa-desktop fa-5x gray"></i></figure>
+              <h3 class="text-center">ECONOMY</h3>
+              <p class="text-body mb-5">　エコノミープランでは、1ページ、集客目的のチラシのようなページを制作します。<br>とりあえず試してみたい方におすすめです！<br></p>
+            </a>
           </div>
           <div class="col-md-4 col-sm-12">
+            <a href="business.html">
             <figure class="text-center"><i class="fas fa-desktop fa-5x gray"></i></figure>
             <h3 class="text-center">BUSINESS</h3>
             <p class="text-body mb-5">ビジネスプランは、本格的なページを作りたい方におすすめです。<br>複数ページあり、本格的なサイトが作成できます。</p>
+          </a>
           </div>
           <div class="col-md-4 col-sm-12">
             <figure class="text-center"><i class="fas fa-desktop fa-5x gray"></i></figure>
